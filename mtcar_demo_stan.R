@@ -53,10 +53,14 @@ summary(lm(mpg~cyl+wt+qsec,data=cardata))
 
 
 ### Now let's try a mixed effects (hierarchical) model with # of cylinders as a random (intercept) variable
+
+#using rstanarm (easy mode)
 fit_mixed <- stan_glmer(mpg ~ cyl + wt + qsec + (1|vs),data=cardata, cores=1, control = list(adapt_delta = 0.99))
 plot(fit_mixed, 'trace')
 summary(fit_mixed)
 prior_summary(fit_mixed)
 
+
+#original stan
 
 

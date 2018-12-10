@@ -25,7 +25,6 @@ model {
   //likelihood function
   for(i in 1:N){
     mu = beta[1] + beta[2]*cyl[i] + beta[3]*wt[i] + beta[4]*qsec[i];
-    //mu = beta[1] + beta[2]*wt[i];
     mpg[i] ~ normal(mu, sigma);
   }
 }
