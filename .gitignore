@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 *.rds
+
+# Jupyter Notebook
+.ipynb_checkpoints
