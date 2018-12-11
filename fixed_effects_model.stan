@@ -8,7 +8,6 @@ data {
 
 parameters {
   vector[4] beta;
-  //vector[2] beta;
   real<lower=0> sigma;
 }
 
