@@ -12,10 +12,6 @@ head(cardata)
 summary(lm(mpg~cyl+wt+qsec,data=cardata))
 
 
-# Converting categorical variables to factors
-# cardata$vs <- factor(cardata$vs) #inline or V engine config
-# cardata$am <- factor(cardata$am) #automatic or manual transmission?
-
 # Put our model's data in a list (the form rstan requires)
 stanData <- list(N = nrow(cardata), mpg = cardata$mpg, cyl = cardata$cyl,wt = cardata$wt,
                  qsec = cardata$qsec)
